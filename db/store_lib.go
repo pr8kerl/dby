@@ -259,7 +259,7 @@ func (s *Storage) ImportDocs(path string, o ...bool) error {
 	}
 
 	for _, j := range s.GetAllBuffer() {
-		if j == nil {
+		if *j == nil {
 			continue
 		}
 		if len((*j).(map[interface{}]interface{})) == 0 {
